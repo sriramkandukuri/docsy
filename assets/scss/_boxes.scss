@@ -3,8 +3,13 @@
 
 // box-variant creates the main style for a colored section used on the site.
 @mixin box-variant($parent, $color-name, $color-value) {
-    $text-color: color-yiq($color-value);
-    $link-color: mix($blue, $text-color, lightness($color-value));
+    $text-color: #000;
+    @if (lightness($color-value) > 50) {
+        $text-color: darken($color-value, 50);
+    } @else {
+        $text-color: lighten($color-value, 50);
+    }
+    $link-color: mix($blue-orig, $text-color, 70);
     $link-hover-color: rgba($link-color, 0.5) !default;
 
     #{$parent} {
@@ -34,7 +39,7 @@
     @include link-variant("#{$parent}--#{$color-name} p > a", $link-color, $link-hover-color, false);
 
     @if $enable-gradients {
-        @include bg-gradient-variant("#{$parent}--1#{$color-name}#{$parent}--gradient", $color-value);
+        @include bg-gradient-variant("#{$parent}--#{$color-name}#{$parent}--gradient", $color-value);
     }
 }
 

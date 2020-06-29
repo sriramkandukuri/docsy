@@ -17,30 +17,58 @@ $td-enable-google-fonts: true !default;
 
 // Theme colors
 
-$primary: #30638E !default;
-$primary-light: lighten($primary, 75%) !default;
-$secondary: #FFA630 !default;
+
+$plt3: #8CDCFC !default;
+$plt2: #6DC0EB !default;
+$plt5: #DBEEF7 !default;
+$plt1: #2A8ECC !default;
+$plt4: #A3D8F2 !default;
+
+$cplt1: #4f6267 !default;
+$cplt2: #4B2142 !default;
+$cplt3: #f6ae2d !default;
+$cplt4: #D0CCD0 !default;
+$cplt5: #FBFCFF !default;
+
+
+$primary: $cplt1 !default;
+$primary-light: $cplt5 !default;
+$secondary: $cplt3 !default;
 $success: #3772FF !default;
 $info: #C0E0DE !default;
 $warning: #ED6A5A !default;
 $danger: #ED6A5A !default;
-$white: #fff !default;
+$white: #222222 !default;
 $light: #D3F3EE !default;
 
 $dark: #403F4C !default;
-$blue: #72A1E5 !default;
-$orange: #BA5A31 !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #eee !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ccc !default;
+$blue: #ffff00 !default;
+$blue-orig: #72A1E5 !default;
+$orange: #45e6ff !default;
+$gray-900: #f8f9fa !default;
+$gray-800: #eee !default;
+$gray-700: #dee2e6 !default;
+$gray-600: #ccc !default;
 $gray-500: #adb5bd !default;
-$gray-600: #888 !default;
-$gray-700: #495057 !default;
-$gray-800: #333 !default;
-$gray-900: #222 !default;
-$black: #000 !default;
+$gray-400: #888 !default;
+$gray-300: #495057 !default;
+$gray-200: #333 !default;
+$gray-100: #222 !default;
+$black: #AAA !default;
 
+$theme-colors: (
+    "plt3" : $plt3,
+    "plt2" : $plt2,
+    "plt5" : $plt5,
+    "plt1" : $plt1,
+    "plt4" : $plt4,
+    "cplt3" : $cplt3,
+    "cplt2" : $cplt2,
+    "cplt5" : $cplt5,
+    "cplt1" : $cplt1,
+    "cplt4" : $cplt4,
+    "blue-orig": $blue-orig,
+);
 $code-color: darken($secondary, 20%) !default;
 
 // UI element colors
@@ -52,7 +80,8 @@ $td-sidebar-border-color: $border-color !default;
 // Background colors for the sections on home page etc. It is a paint by number system, starting at 0, where the number is taken from the shortcode's ordinal
 // if not provided by the user.
 // These colors are all part of the theme palette, but the mix is fairly random to create variation. This can be overridden by the project if needed.
-$td-box-colors: $dark, $primary, $secondary, $info, $primary-light, $gray-600, $success, $warning, $dark, $danger, $primary, $secondary, $primary-light, $info !default;
+$td-box-colors: $dark, $primary, $secondary, $info, $gray-600, $success, $cplt1, $cplt2, $cplt3, $cplt4, $cplt5, $warning, $dark, $danger, $primary, $secondary, $primary-light, $info !default;
+// $td-box-colors: #def2ff, #089cff, #bae3ff, #1fa5ff, #a10dff, #33adff, #82cdff, #47b6ff, #61c0ff, #def2ff, #089cff, #bae3ff, #1fa5ff, #a10dff, #33adff, #82cdff, #47b6ff, #61c0ff !default 
 
 $link-color: darken($blue, 15%) !default;
 $link-decoration: none !default;
@@ -61,8 +90,8 @@ $link-hover-decoration: none !default;
 
 // Fonts
 
-$google_font_name: "Open Sans" !default;
-$google_font_family: "Open+Sans:300,300i,400,400i,700,700i" !default;
+$google_font_name: "Roboto" !default;
+$google_font_family: "Roboto:300,300i,400,400i,700,700i" !default;
 $web-font-path: "https://fonts.googleapis.com/css?family=#{$google_font_family}";
 
 $td-fonts-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -102,7 +131,7 @@ $display1-weight: $font-weight-bold !default;
 $display2-weight: $font-weight-bold !default;
 $display3-weight: $font-weight-bold !default;
 $display4-weight: $font-weight-bold !default;
-$display1-size: 3rem !default;
+$display1-size: 5rem !default;
 $display2-size: 2.5rem !default;
 $display3-size: 2rem !default;
 $display4-size: 1.75rem !default;

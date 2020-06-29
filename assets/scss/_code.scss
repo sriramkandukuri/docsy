@@ -7,7 +7,7 @@
         
         margin: 2rem 0;
         padding: 1rem;
-        background-color: $gray-100;
+        background-color: $gray-600;
 
         pre, div {
             background-color: inherit !important;
@@ -26,7 +26,8 @@
         margin: 0;
         font-size: 85%;
         word-break: normal;
-        background-color: rgba($black, 0.05);
+        background-color: $gray-200;
+        border-color: $black;
         border-radius: $border-radius;
 
         br {
@@ -38,9 +39,10 @@
     // Code blocks
     pre {
         word-wrap: normal;
-        background-color: $gray-100;
+        background-color: $gray-200;
         padding: $spacer;
-     
+        border: 25;
+
 
         > code {
             padding: 0;

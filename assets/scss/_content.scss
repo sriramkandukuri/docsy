@@ -44,9 +44,10 @@
     }
 
     > blockquote {
-        padding: 0 0 0 1rem;
+        padding: 1rem 0 1rem 1rem;
         margin-bottom: $spacer;
-        color: $gray-600;
+        color: $gray-900;
+        background-color: $gray-200;
         border-left: 6px solid $secondary;
     }
 
@@ -79,4 +80,8 @@
     @include media-breakpoint-up(sm) {
         font-size: 3rem;
     }
+}
+
+.lntsk-footer {
+    background: $primary;
 }
