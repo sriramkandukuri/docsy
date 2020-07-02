@@ -31,8 +31,15 @@
         <div class="text-center">
           {{ with .Get "title" }}<h1 class="display-1 mt-0 mt-md-5 pb-4">{{ $title := . }}{{ with $logo_image }}{{ $logo_image_resized := (.Fit (printf "70x70 %s" $logo_anchor)) }}<img class="td-cover-logo" src="{{ $logo_image_resized.RelPermalink }}" alt="{{ $title | html }} Logo">{{ end }}{{ $title | html }}</h1>{{ end }}
           {{ with .Get "subtitle" }}<p class="display-2 text-uppercase mb-0">{{ . | html }}</p>{{ end }}
+<div class="row">
+<div class="col-sm-6 text-left">
+		<img class="img-fluid" src="{{ if .Site.Params.ui.navbar_logo }}{{ with resources.Get "icons/logo.png" }}{{ .RelPermalink }}{{ end }}{{ end }}" >
+</div>
+<div class="col-sm-6 mx-auto">
           <div class="pt-3 lead">
             {{ .Inner | markdownify}}
+          </div>
+          </div>
           </div>
         </div>
       </div>

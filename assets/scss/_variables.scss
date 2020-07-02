@@ -24,7 +24,7 @@ $plt5: #DBEEF7 !default;
 $plt1: #2A8ECC !default;
 $plt4: #A3D8F2 !default;
 
-$cplt1: #4f6267 !default;
+$cplt1: #333e4f !default;
 $cplt2: #4B2142 !default;
 $cplt3: #f6ae2d !default;
 $cplt4: #D0CCD0 !default;
@@ -139,8 +139,8 @@ $display4-size: 1.75rem !default;
 // Space
 
 $spacer: 1rem;
-$td-block-space-top-base: 4 * $spacer !default;
-$td-block-space-bottom-base: 4 * $spacer !default;
+$td-block-space-top-base: 3 * $spacer !default;
+$td-block-space-bottom-base: 3 * $spacer !default;
 
 // Pagination
 
